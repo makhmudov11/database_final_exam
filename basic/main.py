@@ -1,8 +1,8 @@
 
 from basic.login import print_menu
 from core.table_queries import initializing_tables
-from library.admin import admin_menu
-from library.users import users_menu
+from library.admin import admin_menu, add_book_admin, up_del_admin
+from library.users import users_menu, show_books_user, search_by_author, rent_book, return_book, view_rent_book
 
 
 def main():
@@ -12,9 +12,9 @@ def main():
             admin_menu()
             choice = input("Tanlang: ")
             if choice == '1':
-                pass# add_book_admin()
+                add_book_admin()
             elif choice == '2':
-                pass
+                up_del_admin()
             elif choice == '3':
                 print("Good bye!")
                 return
@@ -25,15 +25,15 @@ def main():
             users_menu()
             choice = input("Tanlang: ")
             if choice == '1':
-                pass
+                show_books_user()
             elif choice == '2':
-                pass
+                search_by_author()
             elif choice == '3':
-                pass
+                rent_book(user_data=user)
             elif choice == '4':
-                pass
+                return_book(user_data=user)
             elif choice == '5':
-                pass
+                view_rent_book(user_data=user)
             elif choice == '6':
                 print("Good bye.")
                 return

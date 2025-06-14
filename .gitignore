@@ -163,4 +163,3 @@ cython_debug/
 .idea/
 core/.env
 core/logs.log
-library
